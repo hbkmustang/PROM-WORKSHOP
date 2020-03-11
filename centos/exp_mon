@@ -1,0 +1,13 @@
+service exp_mon
+{
+  type = UNLISTED
+  port = 10100
+  protocol = tcp
+  socket_type = stream
+  wait = no
+  user = root
+  server = /opt/metrics.d/httpwrapper
+  server_args = exporter_monitoring
+  disable = no
+}
+
